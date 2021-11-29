@@ -5,7 +5,7 @@ const MyTeam = ({ miHeroe, setMiHeroe, miArreglo, setMiArreglo }) => {
   const navigate = useNavigate();
 
   const [state, setState] = useState([]);
-  /* JSON.parse(localStorage.getItem("myteam"))); */
+  
   const [allFavorite, setAllFavorite] = React.useState(
     []
   );
@@ -16,19 +16,10 @@ const MyTeam = ({ miHeroe, setMiHeroe, miArreglo, setMiArreglo }) => {
     );
     localStorage.setItem("myteam", JSON.stringify(newFavorite));
     setAllFavorite(newFavorite);
-    /* setState(newFavorite); */
+    
     setMiHeroe(newFavorite);
   };
 
-  /* const init = () => {
-    const data = localStorage.getItem("myteam")
-    if (data) {
-      setState()
-    }
-
-    useEffect(() => {
-    init();
-    }) */
 
   const suma = (ns) => {
     let acumulado = 0;
@@ -39,8 +30,7 @@ const MyTeam = ({ miHeroe, setMiHeroe, miArreglo, setMiArreglo }) => {
     console.log(acumulado);
   };
 
-  /* const combat = state.map(x => x.powerstats.combat)
-    const combatTotal = suma(combat)  */
+  
 
   return (
     <div>
